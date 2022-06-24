@@ -7,6 +7,7 @@ public class BonamikRt : ModuleRules {
         PublicDependencyModuleNames.AddRange(new string[] {
             "AnimGraphRuntime",
             "AnimationCore",
+            "BonamikEd",
             "Core",
             "CoreUObject",
             "Engine",

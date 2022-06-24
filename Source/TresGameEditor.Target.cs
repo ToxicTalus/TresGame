@@ -6,6 +6,7 @@ public class TresGameEditorTarget : TargetRules {
 		ExtraModuleNames.AddRange(new string[] {
 			"ActorSequence",
 			"BonamikRt",
+			"BonamikEd",
 			"ClothingSystemRuntime",
 			"GeometryCache",
 			"KBDRt",

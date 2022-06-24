@@ -12,12 +12,17 @@
 		{
 			"Name": "KineDriverEd",
 			"Type": "Editor",
-			"LoadingPhase": "Default"
+			"LoadingPhase": "PostEngineInit"
 		},
 		{
 			"Name": "KineDriverRt",
 			"Type": "Runtime",
 			"LoadingPhase": "Default"
+		},
+		{
+			"Name": "BonamikEd",
+			"Type": "Editor",
+			"LoadingPhase": "PostEngineInit"
 		},
 		{
 			"Name": "BonamikRt",
