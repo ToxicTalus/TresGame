@@ -3,11 +3,11 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "AssetTypeActions_Base.h"
 #include "AssetTypeCategories.h"
 #include "ModuleManager.h"
-#include "ObjectMacros.h"
-#include "Editor/UnrealEdEngine.h"
-#include "TresGameEditor.generated.h"
+#include "TresGameEditor_Factory.h"
+
 
 static EAssetTypeCategories::Type SQEX_AssetCategory;
 
@@ -18,23 +18,4 @@ public:
 	/** IModuleInterface implementation */
 	virtual void StartupModule() override;
 	virtual void ShutdownModule() override;
-};
-
-UCLASS()
-class TRESGAMEEDITOR_API UTresUnrealEdEngine : public UUnrealEdEngine
-{
-	GENERATED_BODY()
-
-	UTresUnrealEdEngine(const FObjectInitializer & ObjectInitializer);
-
-private:
-	UPROPERTY(Config)
-	bool m_SpawnByLevelEntity;
-
-	UPROPERTY(Config)
-	bool m_SpawnByEnemySetInstance;
-
-	UPROPERTY(Config)
-	bool m_SpawnMatineePreviewActor;
-	
 };

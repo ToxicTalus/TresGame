@@ -1,0 +1,15 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-TresGameEdit.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"O:\KH\UnrealEngine-SquareEnix\Engine\Intermediate\Build\Win64\UE4Editor\Development\UnrealEd\SharedPCH.UnrealEd.h.obj"
+"O:\KH\TresGame\TresGame\Source\TresGameEdit\Intermediate\Build\Win64\UE4Editor\Development\TresGameEdit\TresGameEdit.cpp.obj"
+"O:\KH\TresGame\TresGame\Source\TresGameEdit\Intermediate\Build\Win64\UE4Editor\Development\TresGameEdit\TresGameEditEdMode.cpp.obj"
+"O:\KH\TresGame\TresGame\Source\TresGameEdit\Intermediate\Build\Win64\UE4Editor\Development\TresGameEdit\TresGameEditEdModeToolkit.cpp.obj"
+"O:\KH\UnrealEngine-SquareEnix\Engine\Intermediate\Build\Win64\UE4Editor\Development\PCLaunch.rc.res"
+"O:\KH\UnrealEngine-SquareEnix\Engine\Intermediate\Build\Win64\UE4Editor\Development\ModuleVersionResource.rc.inl.res"
+/OUT:"O:\KH\TresGame\TresGame\Source\TresGameEdit\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-TresGameEdit.lib"
