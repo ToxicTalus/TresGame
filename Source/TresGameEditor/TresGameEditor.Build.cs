@@ -9,6 +9,7 @@ public class TresGameEditor : ModuleRules {
             "AnimGraphRuntime",
             "AnimationCore",
             "BonamikRt",
+            "BonamikEd",
             "Core",
             "CoreUObject",
             "CriWareRuntime",

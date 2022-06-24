@@ -24,7 +24,7 @@
 
 class USkeleton;
 
-UCLASS(Blueprintable)
+UCLASS()
 class KINEDRIVERRT_API USQEX_KineDriverData : public UObject {
     GENERATED_BODY()
 public:
