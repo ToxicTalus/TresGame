@@ -1,10 +1,11 @@
 // Copyright 1998-2017 Epic Games, Inc. All Rights Reserved.
 
-#include "TresGameEditor/Public/TresGameEditor.h"
-
+#include "TresGameEditor.h"
+#include "TresGameEditorMode.h"
 #include "AssetToolsModule.h"
 #include "IAssetTools.h"
-#include "TresGameEditor/Public/TresGameEditor_Factory.h"
+
+#include "TresGameEditor_Factory.h"
 
 #define LOCTEXT_NAMESPACE "FTresGameEditorModule"
 

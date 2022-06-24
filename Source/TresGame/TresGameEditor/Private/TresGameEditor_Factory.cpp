@@ -1,6 +1,6 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-#include "TresGameEditor/Public/TresGameEditor_Factory.h"
+#include "Public/TresGameEditor_Factory.h"
 
 #include "AssetTypeCategories.h"
 #include "Package.h"

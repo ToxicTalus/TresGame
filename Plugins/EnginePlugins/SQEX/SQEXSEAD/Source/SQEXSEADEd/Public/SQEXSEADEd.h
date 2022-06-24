@@ -3,6 +3,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "UObject/Object.h"
+#include "SQEXSEADEd.generated.h"
 
 class USQEXSEADEd : public UObject
 {

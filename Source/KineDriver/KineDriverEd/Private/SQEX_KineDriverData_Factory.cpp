@@ -10,7 +10,8 @@
 
 USQEX_KineDriverData_Factory::USQEX_KineDriverData_Factory()
 {
-	Formats.Add(TEXT("xml;KineDriver Data"));
+	Formats.Add(TEXT("xml;KineDriver XML File"));
+	Formats.Add(TEXT("json;KineDriver Json File"));
 	bCreateNew = true;
 	bEditAfterNew = true;
 	bEditorImport = true;
