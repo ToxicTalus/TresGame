@@ -30,79 +30,79 @@ UCLASS(BlueprintType)
 class SCALEFORMUI_API UGFxMoviePlayer : public UObject {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     FString SwfAssetName;
     
     UPROPERTY(BlueprintReadOnly, Transient)
     UGFxObject* Root;
     
-    UPROPERTY(EditAnywhere)
-    uint8 bDisplayWithHudOff: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
+    uint32 bDisplayWithHudOff: 1;
     
-    UPROPERTY(EditAnywhere)
-    uint8 bEnableGammaCorrection: 1;
-    
-    UPROPERTY(VisibleAnywhere)
-    uint8 bAllowInput: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
+    uint32 bEnableGammaCorrection: 1;
     
     UPROPERTY(VisibleAnywhere)
-    uint8 bAllowFocus: 1;
+    uint32 bAllowInput: 1;
     
-    UPROPERTY(EditAnywhere)
-    uint8 bCloseOnLevelChange: 1;
+    UPROPERTY(VisibleAnywhere)
+    uint32 bAllowFocus: 1;
     
-    UPROPERTY(EditAnywhere)
-    uint8 bOnlyOwnerFocusable: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
+    uint32 bCloseOnLevelChange: 1;
     
-    UPROPERTY(EditAnywhere)
-    uint8 bDiscardNonOwnerInput: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
+    uint32 bOnlyOwnerFocusable: 1;
     
-    UPROPERTY(EditAnywhere)
-    uint8 bCaptureKeyboardInput: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
+    uint32 bDiscardNonOwnerInput: 1;
     
-    UPROPERTY(EditAnywhere)
-    uint8 bCaptureMouseInput: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
+    uint32 bCaptureKeyboardInput: 1;
     
-    UPROPERTY(EditAnywhere)
-    uint8 bCaptureGamepadInput: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
+    uint32 bCaptureMouseInput: 1;
     
-    UPROPERTY(EditAnywhere)
-    uint8 bCaptureTouchInput: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
+    uint32 bCaptureGamepadInput: 1;
     
-    UPROPERTY(EditAnywhere)
-    uint8 bIsSplitscreenLayoutModified: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
+    uint32 bCaptureTouchInput: 1;
     
-    UPROPERTY(EditAnywhere)
-    uint8 bShowDefaultMouseCursor: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
+    uint32 bIsSplitscreenLayoutModified: 1;
     
-    UPROPERTY(EditAnywhere)
-    uint8 bBlurLesserMovies: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
+    uint32 bShowDefaultMouseCursor: 1;
     
-    UPROPERTY(EditAnywhere)
-    uint8 bHideLesserMovies: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
+    uint32 bBlurLesserMovies: 1;
     
-    UPROPERTY(EditAnywhere)
-    uint8 bIsPriorityBlurred: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
+    uint32 bHideLesserMovies: 1;
     
-    UPROPERTY(EditAnywhere)
-    uint8 bIsPriorityHidden: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
+    uint32 bIsPriorityBlurred: 1;
     
-    UPROPERTY(EditAnywhere)
-    uint8 bIgnoreVisibilityEffect: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
+    uint32 bIsPriorityHidden: 1;
     
-    UPROPERTY(EditAnywhere)
-    uint8 bIgnoreBlurEffect: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
+    uint32 bIgnoreVisibilityEffect: 1;
     
-    UPROPERTY(EditAnywhere)
-    uint8 bRefreshed: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
+    uint32 bIgnoreBlurEffect: 1;
     
-    UPROPERTY(EditAnywhere)
-    uint8 bAlphaComposite: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
+    uint32 bRefreshed: 1;
     
-    UPROPERTY(EditAnywhere)
-    uint8 bPerformHitTest: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
+    uint32 bAlphaComposite: 1;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
+    uint32 bPerformHitTest: 1;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<GFxHitTestType::Type> HitTestType;
     
     UPROPERTY(Transient)
@@ -111,25 +111,25 @@ public:
     UPROPERTY(Transient)
     UObject* ExternalInterface;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TArray<FKey> CaptureKeys;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TArray<FKey> FocusIgnoreKeys;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FExternalTexture> ExternalTextures;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<EGFxRenderTextureMode::Type> RenderTextureMode;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     uint8 Priority;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     TArray<FGFxWidgetBinding> WidgetBindings;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere)
     int32 SplitscreenLayoutYAdjust;
     
     UPROPERTY(BlueprintAssignable)
@@ -151,11 +151,11 @@ public:
     FOnFocusCommandSignature OnFocusLostCommand;
     
 private:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TArray<UGFxObject*> CachedMovieClipsArray;
     
-    UPROPERTY(EditAnywhere)
-    uint8 bSwitchingPlayInThread: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
+    uint32 bSwitchingPlayInThread: 1;
     
 public:
     UGFxMoviePlayer();
@@ -222,7 +222,7 @@ public:
     UFUNCTION(BlueprintCallable)
     void SetAlignment(TEnumAsByte<EGFxAlign::Type> Align);
     
-    UFUNCTION()
+    UFUNCTION(BlueprintCallable)
     void ReceiveGFxCommand(const FString& Command, const FString& Arguments);
     
     UFUNCTION(BlueprintCallable)

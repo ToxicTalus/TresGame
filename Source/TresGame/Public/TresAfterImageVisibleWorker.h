@@ -9,7 +9,7 @@ struct FTresAfterImageVisibleWorker {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* m_VisibleEffectCmp;
     
 public:

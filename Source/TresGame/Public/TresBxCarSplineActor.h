@@ -1,24 +1,24 @@
 #pragma once
 #include "CoreMinimal.h"
-//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=SQEX_SplineActor -FallbackName=SQEX_SplineActor
 #include "EGimmickBX_CarSplineBlinker.h"
 #include "SQEX_SplineActor.h"
+
 #include "TresBxCarSplineActor.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresBxCarSplineActor : public ASQEX_SplineActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TEnumAsByte<EGimmickBX_CarSplineBlinker> m_eBlinkerType;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bConnection;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bNoRotation;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool m_bHighSpeed;
     
     ATresBxCarSplineActor();

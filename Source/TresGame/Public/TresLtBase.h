@@ -5,11 +5,11 @@
 
 class UStaticMeshComponent;
 
-UCLASS(Abstract, Config=Game)
+UCLASS(Abstract, Blueprintable, Config=Game)
 class ATresLtBase : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UStaticMeshComponent* StaticMeshComponent;
     
     ATresLtBase();

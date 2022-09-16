@@ -6,11 +6,11 @@
 class UDecalComponent;
 class UMaterialInterface;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresFootStepDecal : public AActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UDecalComponent* m_Decal;
     
     ATresFootStepDecal();

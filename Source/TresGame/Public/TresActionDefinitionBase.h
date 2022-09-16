@@ -8,29 +8,29 @@
 class AActor;
 class USceneComponent;
 
-UCLASS(Abstract, NotPlaceable)
+UCLASS(Abstract, Blueprintable, NotPlaceable)
 class UTresActionDefinitionBase : public UTresStateBase {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, EditInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TWeakObjectPtr<AActor> m_Target;
     
-    UPROPERTY(BlueprintReadOnly, EditInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector m_Destination;
     
-    UPROPERTY(BlueprintReadOnly, EditInstanceOnly, Export)
+    UPROPERTY(EditAnywhere, Export)
     TWeakObjectPtr<USceneComponent> m_LockonTarget;
     
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta = (AllowPrivateAccess = true))
     TArray<TEnumAsByte<ETresStateID>> m_ViableStates;
     
 private:
-    UPROPERTY(EditDefaultsOnly)
-    uint32 m_bActionAbortPermission: 1;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 m_bActionAbortPermission: 1;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditInstanceOnly)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_SubStep;
     
 public:

@@ -5,11 +5,11 @@
 
 class UDataTable;
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API UTresFoodstuffDropDataSet : public UTresLoadAsset {
     GENERATED_BODY()
 public:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     UDataTable* m_FoodstuffDropDataTables[32];
     
     UTresFoodstuffDropDataSet();

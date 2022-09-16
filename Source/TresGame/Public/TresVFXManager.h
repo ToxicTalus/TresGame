@@ -7,7 +7,7 @@
 class USkeletalMeshComponent;
 class UAnimationAsset;
 
-UCLASS()
+UCLASS(Blueprintable)
 class ATresVFXManager : public ASQEX_VFXManager {
     GENERATED_BODY()
 public:

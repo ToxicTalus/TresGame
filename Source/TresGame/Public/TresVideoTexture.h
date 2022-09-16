@@ -4,7 +4,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=SQEX_VideoTexture -FallbackName=SQEX_VideoTexture
 #include "TresVideoTexture.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class UTresVideoTexture : public USQEX_VideoTexture {
     GENERATED_BODY()
 public:

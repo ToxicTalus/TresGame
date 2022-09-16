@@ -5,11 +5,11 @@
 
 class UTresStaticMeshComponent;
 
-UCLASS(Abstract)
+UCLASS(Abstract, Blueprintable)
 class ATresTsDancingPlant : public ATresGimmickActor {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadOnly, Export, VisibleAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UTresStaticMeshComponent* MyMesh;
     
     ATresTsDancingPlant();

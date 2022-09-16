@@ -8,7 +8,7 @@ USTRUCT(BlueprintType)
 struct FStoleTrapWorkData {
     GENERATED_BODY()
 public:
-    UPROPERTY(Export, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     UParticleSystemComponent* m_PointEffectComp;
     
     TRESGAME_API FStoleTrapWorkData();

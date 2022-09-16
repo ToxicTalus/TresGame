@@ -3,32 +3,32 @@
 #include "TresRailSlideWork.generated.h"
 
 class AActor;
-class USQEX_SplineComponent;
 class ASQEX_SplineActor;
+class USQEX_SplineComponent;
 
 USTRUCT(BlueprintType)
 struct FTresRailSlideWork {
     GENERATED_BODY()
 public:
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AActor* m_LeadActor;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ASQEX_SplineActor* m_RailSlideActor;
     
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USQEX_SplineComponent* m_RailSlideComponent;
     
-    UPROPERTY(Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ASQEX_SplineActor* m_LastRailSlideActor;
     
-    UPROPERTY(Export, Transient)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     USQEX_SplineComponent* m_LastRailSlideComponent;
     
-    UPROPERTY()
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ASQEX_SplineActor* m_PauseCheckActor;
     
-    UPROPERTY(Export)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USQEX_SplineComponent* m_PauseCheckComponent;
     
     TRESGAME_API FTresRailSlideWork();

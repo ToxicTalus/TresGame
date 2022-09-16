@@ -5,12 +5,12 @@
 
 class USoundBase;
 
-UCLASS()
+UCLASS(Blueprintable)
 class TRESGAME_API UTresSoundAliasSet : public UDataAsset {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditDefaultsOnly)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     USoundBase* m_SoundCueAlias[12];
     
 public:

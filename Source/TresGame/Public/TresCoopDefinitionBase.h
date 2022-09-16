@@ -1,21 +1,21 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
 #include "UObject/Object.h"
+#include "UObject/NoExportTypes.h"
 #include "TresCoopDefinitionBase.generated.h"
 
-UCLASS(Abstract, NotPlaceable)
+UCLASS(Abstract, Blueprintable, NotPlaceable)
 class UTresCoopDefinitionBase : public UObject {
     GENERATED_BODY()
 public:
 protected:
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(EditAnywhere, meta = (AllowPrivateAccess = true))
     FInt32Interval m_JoinMemberRange;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 m_ConcurrentExeLimit;
     
-    UPROPERTY(EditAnywhere)
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float m_CooldownTime;
     
 public:
