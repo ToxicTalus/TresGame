@@ -147,7 +147,7 @@ bool ATresAIPawnBase::DebugAIJump(float JumpPower) {
 }
 
 
-ATresAIPawnBase::ATresAIPawnBase() {
+ATresAIPawnBase::ATresAIPawnBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MyAIBehavior = NULL;
     this->m_DefaultAttackDefinition = NULL;
     this->m_DefaultLocomotionDefinition = NULL;
@@ -172,5 +172,6 @@ ATresAIPawnBase::ATresAIPawnBase() {
     this->m_Navigation3DComponent = NULL;
     this->m_bManualEditingObstacleComponent = false;
     this->ObstacleComponent = CreateDefaultSubobject<UMercunaObstacleComponent>(TEXT("MercunaObstacleComponent"));
+    ObstacleComponent->SetupAttachment(RootComponent);
 }
 

@@ -445,14 +445,18 @@ bool ATresCharPawnBase::BP_AbilityAdd(ETresAbilityKind InAbilityKind, bool bEqui
 void ATresCharPawnBase::ApplyKBD(USQEX_DynamicBindAssetUserData* KBDAssetUserData, FName ElementName, bool bIsReset, bool bIsResetPose, int32 PreRoll, bool KeepReferences) {
 }
 
-ATresCharPawnBase::ATresCharPawnBase() {
+ATresCharPawnBase::ATresCharPawnBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MyMovement = CreateDefaultSubobject<UTresAICharMovementComponent>(TEXT("TresCharMovement0"));
     this->MyMesh = CreateDefaultSubobject<UTresSkeletalMeshComponent>(TEXT("TresCharMesh0"));
+    MyMesh->SetupAttachment(GetRootComponent());
     this->MyAtkColl = CreateDefaultSubobject<UTresAtkCollComponent>(TEXT("TresAtkColl0"));
+    MyAtkColl->SetupAttachment(MyMesh);
     this->MyBodyColl = CreateDefaultSubobject<UTresBodyCollComponent>(TEXT("TresBodyColl0"));
+    MyBodyColl->SetupAttachment(MyMesh);
     this->MyEquipment = CreateDefaultSubobject<UTresEquipmentComponent>(TEXT("TresEquipment0"));
     this->MyStateComp = CreateDefaultSubobject<UTresStateQueueComponent>(TEXT("TresStateQueue0"));
     this->MyEffectAtt = CreateDefaultSubobject<UTresEffectAttachComponent>(TEXT("TresEffectAttach0"));
+    MyEffectAtt->SetupAttachment(GetRootComponent());
     this->bPressedJump = false;
     this->JumpKeyHoldTime = 0.00f;
     this->JumpMaxHoldTime = 0.00f;

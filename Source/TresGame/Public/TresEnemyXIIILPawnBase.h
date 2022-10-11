@@ -15,12 +15,12 @@ public:
     USQEX_ParticleAttachDataAsset* m_UniqueEffectDataAsset;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 m_bEnableRevengeChain: 1;
+    uint32 m_bEnableRevengeChain: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FName> m_RevengeChainBaseDataTableIDNameList;
     
-    ATresEnemyXIIILPawnBase();
+    ATresEnemyXIIILPawnBase(const FObjectInitializer& ObjectInitializer);
 private:
     UFUNCTION()
     void OnDtorStateEvent_XIIIL(TEnumAsByte<ETresStateID> inStateID);

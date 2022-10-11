@@ -185,9 +185,9 @@ ETresChrUniqueID ATresPawnBase::BP_GetChrUniqueID() const {
 void ATresPawnBase::AdjustRotate(float InRotRate) {
 }
 
-ATresPawnBase::ATresPawnBase() {
+ATresPawnBase::ATresPawnBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->MyRoot = CreateDefaultSubobject<UTresRootComponent>(TEXT("TresRoot"));
-    RootComponent = MyRoot;
+    SetRootComponent(MyRoot);
     this->m_pDataTableSet = NULL;
     this->m_SoundAliasAsset = NULL;
     this->m_pBaseParam = NULL;
